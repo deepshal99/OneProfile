@@ -1,14 +1,35 @@
 import './App.css';
 import {Heading, VStack} from '@chakra-ui/react';
 import Signup from './components/Signup'
-// import { Link } from 'react-router-dom';
+import Login from './components/Login'
+import Home from './components/Home'
+import RegisterContainer from './components/RegisterContainer';
+
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 function App() {
     return (
-        <VStack p='4'>
-            <Heading>OneProfile</Heading>
-            <Signup></Signup>
-        </VStack>
+        <Router>
+            <div>
+
+                <VStack p='4'>
+                    <Heading>OneProfile</Heading>
+                    <Switch>
+                        <Route exact path='/'>
+                            <Home />
+                        </Route>
+                        <Route exact path='/login'>
+                            <Login />
+                        </Route>
+                        <Route exact path='/signup'>
+                            <Signup />
+                        </Route>
+                    </Switch>
+                    {/* <RegisterContainer></RegisterContainer> */}
+                </VStack>
+
+            </div>
+        </Router>
 
     );
 }
