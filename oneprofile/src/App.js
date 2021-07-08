@@ -13,7 +13,7 @@ function App() {
             <div>
 
                 <VStack p='4'>
-                    <Heading>OneProfile</Heading>
+                    <Link to="/"><Heading>OneProfile</Heading></Link>
                     <Switch>
                         <Route exact path='/'>
                             <Home />
