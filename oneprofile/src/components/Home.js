@@ -5,10 +5,10 @@ import {Button} from '@chakra-ui/react'
 
 export default function Home() {
     return (
-        <div>
-            <Link to="/login"><Button size='lg' colorScheme="blue">Login</Button></Link >
+        <div class="Home-buttons">
+            <Link to="/login"><Button mb='4' size='lg' colorScheme="blue">Login</Button></Link >
             <br />
-            <Link to="/signup"><Button colorScheme="green">Signup</Button></Link >
+            <Link to="/signup"><Button mb='4' colorScheme="green">Signup</Button></Link >
         </div>
     )
 }

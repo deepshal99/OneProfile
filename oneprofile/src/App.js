@@ -1,11 +1,11 @@
 import './App.css';
-import {Heading, VStack} from '@chakra-ui/react';
+import { Heading, VStack } from '@chakra-ui/react';
 import Signup from './components/Signup'
 import Login from './components/Login'
 import Home from './components/Home'
-import RegisterContainer from './components/RegisterContainer';
+import { Link, } from 'react-router-dom'
 
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
     return (
@@ -13,7 +13,7 @@ function App() {
             <div>
 
                 <VStack p='4'>
-                    <Heading>OneProfile</Heading>
+                    <Link to="/"><Heading>OneProfile</Heading></Link>
                     <Switch>
                         <Route exact path='/'>
                             <Home />
