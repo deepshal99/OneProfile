@@ -1,43 +1,49 @@
-import React ,{useRef, useState} from 'react'
+import React, { useRef } from 'react'
 // import ReactDOM from 'react-dom';
-import {Link,} from 'react-router-dom'
-
-import {VStack, Input } from '@chakra-ui/react';
-import {Button} from "@chakra-ui/react"
-import {useAuth} from "../Handler/RegistrationHandler"
+import { Link, useHistory } from 'react-router-dom'
+import { VStack, Input, Button } from '@chakra-ui/react'
+import { signup } from "../Handler/RegistrationHandler"
+import { saveUser } from "../Handler/firestoreHandler"
 
 
 //Sign up Component
-
 
 function Signup() {
 
     const nameRef = useRef();
     const emailRef = useRef();
     const passwordRef = useRef();
-    const { signup } = useAuth();
+    const h = useHistory();
 
     async function register(e) {
         e.preventDefault()
-        console.log("Email: "+emailRef.current.value);
-        console.log("Password: "+passwordRef.current.value);
-        
-        await signup(emailRef.current.value, passwordRef.current.value);
-        console.log("Email After Submit : "+emailRef.current.value);
-        console.log("Password After Submit : "+passwordRef.current.value);
+        try {
+            console.log("Email: " + emailRef.current.value);
+            console.log("Password: " + passwordRef.current.value);
+            await signup(emailRef.current.value, passwordRef.current.value)
+                .then(
+                    saveUser(emailRef.current.value,
+                        nameRef.current.value,
+                        passwordRef.current.value)
+                ).then(()=>{h.push("/profile")})
+
+        } catch (error) {
+            alert(error);
+        }
     }
-    return(
-                <VStack p='4'>
-                    <form onSubmit={register}> 
-                        <Input placeholder="Name" id="name" ref={nameRef}/>
-                        <Input placeholder="Email" id="email" ref={emailRef}/>
-                        <Input placeholder="Password" type="password" id="password" ref={passwordRef}/>
-                        <Button colorScheme="blue" type="submit">Sign Up</Button>
-                    </form> 
-                <Link to="/login">Already have an account?</Link >
-                </VStack>
-            
-            ) ;  
+
+    return (
+        <VStack p='4'>
+            <form onSubmit={register}>
+                <Input placeholder="Name" id="name" ref={nameRef} m="5" />
+                <Input placeholder="Email" id="email" ref={emailRef}/>
+                <Input placeholder="Password" type="password" id="password" ref={passwordRef} m="5" />
+                <Button colorScheme="blue" type="submit">Sign Up</Button>
+            </form>
+            <Link to="/login">Already have an account?</Link >
+        </VStack>
+
+    );
 }
 
 export default Signup;
