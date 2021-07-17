@@ -2,22 +2,13 @@ import {
   Box,
   Heading,
   Flex,
-  Avatar,
   HStack,
   IconButton,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
   useDisclosure,
   useColorModeValue,
   Stack,
 } from '@chakra-ui/react';
-import { Link, useHistory } from 'react-router-dom'
-import { logOut } from '../Handler/RegistrationHandler'
-
+import { Link } from 'react-router-dom'
 
 const Links = ['home', 'profile', 'login'];
 
@@ -35,22 +26,8 @@ const NavLink = ({ children }) => (
   </Link>
 );
 
-
-export default function Header() {
-
+export default function Simple() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const history = useHistory()
-
-
-  function LogoutFunction() {
-
-    logOut().then(() => {
-
-      console.log("Logged out")
-      history.push("/login")
-      localStorage.clear()
-    })
-  }
 
   return (
     <>
@@ -74,29 +51,7 @@ export default function Header() {
               ))}
             </HStack>
           </HStack>
-          <Flex alignItems={'center'}>
-            <Menu>
-              <MenuButton
-                style={{ display: 'flex' }}
-                as={Button}
-                rounded={'full'}
-                // variant={'link'}
-                cursor={'pointer'}>
-                <Avatar
-                  size={'sm'}
-                  src={
-                    'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9'
-                  }
-                />
-              </MenuButton>
-              <MenuList>
-                <Link to="/profile"><MenuItem>Profile</MenuItem></Link>
-                <MenuItem>Settings</MenuItem>
-                <MenuDivider />
-                <MenuItem onClick={LogoutFunction}><p>Logout</p></MenuItem>
-              </MenuList>
-            </Menu>
-          </Flex>
+
         </Flex>
 
         {isOpen ? (

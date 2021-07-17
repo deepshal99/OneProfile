@@ -1,22 +1,3 @@
-// import React from 'react'
-// import { Link, } from 'react-router-dom'
-// import { Button, Flex } from '@chakra-ui/react'
-
-
-// export default function Home() {
-//     return (
-//         <div class="Home-buttons">
-//             <Flex width="Full" align="center" justifyContent="center" direction="column">
-            
-//                 <Link to="/login"><Button colorScheme="blue" width="400px" mt={4}>Login</Button></Link >
-//                 <br />
-//                 <Link to="/signup"><Button colorScheme="blue" width="400px" mt={2}>Signup</Button></Link >
-                
-//             </Flex>
-//         </div>
-//     )
-// }
-
 import React from "react";
 import {
   chakra,
@@ -45,7 +26,7 @@ const KuttyHero = () => {
           letterSpacing={{ base: "normal", md: "tight" }}
           color={useColorModeValue("gray.900",'gray.100')}
         >
-          The Only{" "}
+          All your{" "}
           <Text
             display={{ base: "block", lg: "inline" }}
             w="full"
@@ -53,9 +34,9 @@ const KuttyHero = () => {
             bgGradient="linear(to-r, green.400,purple.500)"
             fontWeight="extrabold"
           >
-            Profile
+            customer feedback
           </Text>{" "}
-          you'll ever need.
+          in one single place.
         </chakra.h1>
         <chakra.p
           px={{ base: 0, lg: 24 }}
