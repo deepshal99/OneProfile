@@ -1,23 +1,5 @@
-// import React from 'react'
-// import { Link, } from 'react-router-dom'
-// import { Button, Flex } from '@chakra-ui/react'
-
-
-// export default function Home() {
-//     return (
-//         <div class="Home-buttons">
-//             <Flex width="Full" align="center" justifyContent="center" direction="column">
-            
-//                 <Link to="/login"><Button colorScheme="blue" width="400px" mt={4}>Login</Button></Link >
-//                 <br />
-//                 <Link to="/signup"><Button colorScheme="blue" width="400px" mt={2}>Signup</Button></Link >
-                
-//             </Flex>
-//         </div>
-//     )
-// }
-
 import React from "react";
+import { Link, } from 'react-router-dom'
 import {
   chakra,
   Box,
@@ -73,10 +55,11 @@ const KuttyHero = () => {
           spacing={2}
           justifyContent={{ sm: "left", md: "center" }}
         >
+          <Link to="/signup">
           <Button
             as="a"
             variant="solid"
-            colorScheme="brand"
+            colorScheme="blue"
             display="inline-flex"
             alignItems="center"
             justifyContent="center"
@@ -85,7 +68,7 @@ const KuttyHero = () => {
             
             size="lg"
           >
-            Get Started
+            Sign Up
             <Icon boxSize={4} ml={1} viewBox="0 0 20 20" fill="currentColor">
               <path
                 fillRule="evenodd"
@@ -94,6 +77,8 @@ const KuttyHero = () => {
               />
             </Icon>
           </Button>
+          </Link>
+          <Link to="/login">
           <Button
             as="a"
             colorScheme="gray"
@@ -105,7 +90,7 @@ const KuttyHero = () => {
             
             size="lg"
           >
-            Book a Demo
+            Login
             <Icon boxSize={4} ml={1} viewBox="0 0 20 20" fill="currentColor">
               <path
                 fillRule="evenodd"
@@ -114,6 +99,7 @@ const KuttyHero = () => {
               />
             </Icon>
           </Button>
+          </Link>
         </Stack>
       </Box>
       <Box

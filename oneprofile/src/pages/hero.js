@@ -24,7 +24,7 @@ const KuttyHero = () => {
           fontWeight="bold"
           lineHeight="none"
           letterSpacing={{ base: "normal", md: "tight" }}
-          color={useColorModeValue("gray.900",'gray.100')}
+          color={useColorModeValue("gray.900", 'gray.100')}
         >
           All your{" "}
           <Text
@@ -42,14 +42,14 @@ const KuttyHero = () => {
           px={{ base: 0, lg: 24 }}
           mb={6}
           fontSize={{ base: "lg", md: "xl" }}
-          color={useColorModeValue("gray.600",'gray.300')}
+          color={useColorModeValue("gray.600", 'gray.300')}
         >
           Hellonext is a feature voting software where you can allow your users
           to vote on features, publish roadmap, and complete your customer
           feedback loop.
         </chakra.p>
         <Stack
-        direction={{base:"column",sm:"row"}}
+          direction={{ base: "column", sm: "row" }}
           mb={{ base: 4, md: 8 }}
           spacing={2}
           justifyContent={{ sm: "left", md: "center" }}
@@ -57,13 +57,13 @@ const KuttyHero = () => {
           <Button
             as="a"
             variant="solid"
-            colorScheme="brand"
+            colorScheme="blue"
             display="inline-flex"
             alignItems="center"
             justifyContent="center"
             w={{ base: "full", sm: "auto" }}
             mb={{ base: 2, sm: 0 }}
-            
+
             size="lg"
           >
             Get Started
@@ -83,7 +83,7 @@ const KuttyHero = () => {
             justifyContent="center"
             w={{ base: "full", sm: "auto" }}
             mb={{ base: 2, sm: 0 }}
-            
+
             size="lg"
           >
             Book a Demo
