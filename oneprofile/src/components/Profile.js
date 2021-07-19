@@ -20,12 +20,18 @@ export default function Dashboard() {
   }
   
   return (
-    <div className="dashboard">
+    <div  className="dashboard">
       <Header />
-      <h1 className="dashboard-text">Welcome</h1>
-      {/* <img src={localStorage.getItem("photourl")} alt="avatar"/> */}
-      <p>Name: {localStorage.getItem("loadedInName")} </p>
-      <p>Email: {localStorage.getItem("loadedInEmail")} </p>
+      <center>
+        <div>
+        <img src={localStorage.getItem("photoURL")} alt="avatar"/>
+        </div>
+        <h1 className="dashboard-text">Welcome</h1>
+      
+        <p>Name: {localStorage.getItem("loadedInName")} </p>
+        <p>Email: {localStorage.getItem("loadedInEmail")} </p>
+       
+      </center>
       
     </div>
   );

@@ -7,27 +7,27 @@ import HomeHeader from './components/HomeHeader';
 import Profile from './components/Profile'
 import RegistrationHandler from './Handler/RegistrationHandler'
 import { SignIn } from './components/SignIn';
-import Hero from './pages/hero.js'
+import Hero from './pages/Hero'
+import Pricing from './pages/Pricing'
+import MultiStepForm from './components/MultiStep'
 
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // import RegistrationHandler from './Handler/RegistrationHandler';
 
 function App() {
-
-
+    
     return (
         <RegistrationHandler>
             <Router>
                 <div>
-
                     <VStack p='0'>
                         <Switch>
                             <Route exact path='/'>
                                 <HomeHeader />
                                 <Home />
                             </Route>
-                            <Route exact path='/hero'>
+                            <Route exact path='/Hero'>
                                 <Hero />
                             </Route>
                             <Route exact path='/home'>
@@ -39,6 +39,13 @@ function App() {
                             </Route>
                             <Route exact path='/signin'>
                                 <SignIn />
+                            </Route>
+                            <Route exact path='/multistep'>
+                                <MultiStepForm />
+                            </Route>
+                            <Route exact path='/pricing'>
+                                <HomeHeader />
+                                <Pricing />
                             </Route>
                             <Route exact path='/login'>
                                 <HomeHeader />

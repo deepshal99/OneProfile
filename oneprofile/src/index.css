@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.hero_img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+/* mobile screen */
+
+@media only screen and (max-width: 600px) {
+  .hero_img {
+    width: 100% !important;
+  }
+}

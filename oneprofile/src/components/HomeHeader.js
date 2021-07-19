@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react';
 import { Link } from 'react-router-dom'
 
-const Links = ['home', 'profile', 'login'];
+const Links = ['pricing', 'login'];
 
 const NavLink = ({ children }) => (
   <Link
@@ -42,7 +42,9 @@ export default function Simple() {
           />
           <HStack spacing={8} alignItems={'center'}>
             <Box><Heading size="md"><Link to="/home">OneProfile </Link></Heading> </Box>
-            <HStack
+            
+          </HStack>
+          <HStack
               as={'nav'}
               spacing={4}
               display={{ base: 'none', md: 'flex' }}>
@@ -50,7 +52,6 @@ export default function Simple() {
                 <NavLink to={"/" + link}>{link}</NavLink>
               ))}
             </HStack>
-          </HStack>
 
         </Flex>
 

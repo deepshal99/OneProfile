@@ -20,13 +20,17 @@ function Login() {
     const auth = firebase.auth();
     const googleProvider = new firebase.auth.GoogleAuthProvider()
 
+ 
+
 
     const signInWithGoogle = (e) => {
         e.preventDefault()
         auth.signInWithPopup(googleProvider).then((res) => {
-            console.log(res.user.email)
+            console.log("User ID:"+res.user.uid)
             localStorage.setItem("loadedInEmail", res.user.email)
             localStorage.setItem("loadedInName", res.user.displayName)
+            localStorage.setItem("photoURL", res.user.photoURL)
+            console.log("photoURL: "+ res.user.photoURL)
     
             saveUser(res.user.email,
                 res.user.displayName)
@@ -65,9 +69,9 @@ function Login() {
                     <Box my={4} textAlign="left">
                         <form onSubmit={onClickHandler}>
                             <FormLabel>Email</FormLabel>
-                            <Input placeholder="enter email" id="email" ref={emailRef} mb={2} />
+                            <Input placeholder="enter email" id="email" ref={emailRef} mb={2} required/>
                             <FormLabel>Password</FormLabel>
-                            <Input placeholder="enter password" type="password" id="password" ref={passwordRef} mb={2} />
+                            <Input placeholder="enter password" type="password" id="password" ref={passwordRef} mb={2} required/>
                             <Button disabled={loading} colorScheme="blue" width="full" mt={4} type="submit">
                                 <Spinner size="sm" mr={3} style={{ display: (loading ? 'block' : 'none') }} />
                                 Log in
