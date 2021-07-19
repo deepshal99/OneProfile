@@ -2,24 +2,15 @@ import {
   Box,
   Heading,
   Flex,
-  Avatar,
   HStack,
   IconButton,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
   useDisclosure,
   useColorModeValue,
   Stack,
 } from '@chakra-ui/react';
-import { Link, useHistory } from 'react-router-dom'
-import { logOut } from '../Handler/RegistrationHandler'
+import { Link } from 'react-router-dom'
 
-
-const Links = [];
+const Links = ['pricing', 'login'];
 
 const NavLink = ({ children }) => (
   <Link
@@ -35,22 +26,8 @@ const NavLink = ({ children }) => (
   </Link>
 );
 
-
-export default function Header() {
-
+export default function Simple() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const history = useHistory()
-
-
-  function LogoutFunction() {
-
-    logOut().then(() => {
-
-      console.log("Logged out")
-      history.push("/home")
-      localStorage.clear()
-    })
-  }
 
   return (
     <>
@@ -65,7 +42,9 @@ export default function Header() {
           />
           <HStack spacing={8} alignItems={'center'}>
             <Box><Heading size="md"><Link to="/home">OneProfile </Link></Heading> </Box>
-            <HStack
+            
+          </HStack>
+          <HStack
               as={'nav'}
               spacing={4}
               display={{ base: 'none', md: 'flex' }}>
@@ -73,30 +52,7 @@ export default function Header() {
                 <NavLink to={"/" + link}>{link}</NavLink>
               ))}
             </HStack>
-          </HStack>
-          <Flex alignItems={'center'}>
-            <Menu>
-              <MenuButton
-                style={{ display: 'flex' }}
-                as={Button}
-                rounded={'full'}
-                // variant={'link'}
-                cursor={'pointer'}>
-                <Avatar
-                  size={'sm'}
-                  src={
-                    localStorage.getItem("photoURL")
-                  }
-                />
-              </MenuButton>
-              <MenuList>
-                <Link to="/profile"><MenuItem>Profile</MenuItem></Link>
-                <MenuItem>Settings</MenuItem>
-                <MenuDivider />
-                <MenuItem onClick={LogoutFunction}><p>Logout</p></MenuItem>
-              </MenuList>
-            </Menu>
-          </Flex>
+
         </Flex>
 
         {isOpen ? (

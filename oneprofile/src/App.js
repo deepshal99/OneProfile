@@ -3,41 +3,65 @@ import { VStack } from '@chakra-ui/react';
 import Signup from './components/Signup'
 import Login from './components/Login'
 import Home from './components/Home'
-import Header from './components/Header';
-import { Link, } from 'react-router-dom'
+import HomeHeader from './components/HomeHeader';
 import Profile from './components/Profile'
+import RegistrationHandler from './Handler/RegistrationHandler'
+import { SignIn } from './components/SignIn';
+import Hero from './pages/Hero'
+import Pricing from './pages/Pricing'
+import MultiStepForm from './components/MultiStep'
+
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+// import RegistrationHandler from './Handler/RegistrationHandler';
 
 function App() {
+    
     return (
-        <Router>
-            <div>
+        <RegistrationHandler>
+            <Router>
+                <div>
+                    <VStack p='0'>
+                        <Switch>
+                            <Route exact path='/'>
+                                <HomeHeader />
+                                <Home />
+                            </Route>
+                            <Route exact path='/Hero'>
+                                <Hero />
+                            </Route>
+                            <Route exact path='/home'>
+                                <HomeHeader />
+                                <Home />
+                            </Route>
+                            <Route exact path='/profile'>
+                                <Profile />
+                            </Route>
+                            <Route exact path='/signin'>
+                                <SignIn />
+                            </Route>
+                            <Route exact path='/multistep'>
+                                <MultiStepForm />
+                            </Route>
+                            <Route exact path='/pricing'>
+                                <HomeHeader />
+                                <Pricing />
+                            </Route>
+                            <Route exact path='/login'>
+                                <HomeHeader />
+                                <Login />
+                            </Route>
+                            <Route exact path='/signup'>
+                                <HomeHeader />
+                                <Signup />
+                            </Route>
+                        </Switch>
+                        {/* <RegisterContainer></RegisterContainer> */}
+                    </VStack>
 
-                <VStack p='0'>
-                    <Header />
-                    <Switch>
-                        <Route exact path='/'>
-                            <Home />
-                        </Route>
-                        <Route exact path='/home'>
-                            <Home />
-                        </Route>
-                        <Route exact path='/profile'>
-                            <Profile />
-                        </Route>
-                        <Route exact path='/login'>
-                            <Login />
-                        </Route>
-                        <Route exact path='/signup'>
-                            <Signup />
-                        </Route>
-                    </Switch>
-                    {/* <RegisterContainer></RegisterContainer> */}
-                </VStack>
-
-            </div>
-        </Router>
+                </div>
+            </Router>
+        </RegistrationHandler>
 
     );
 }

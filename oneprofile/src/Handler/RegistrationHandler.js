@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react"
 import { auth } from "../firebase"
 
-const AuthContext = React.createContext()
+export const AuthContext = React.createContext()
 
 export function useAuth() {
     return useContext(AuthContext)
@@ -12,15 +12,15 @@ export function signup(email, password) {
 export function login(email, password) {
     return auth.signInWithEmailAndPassword(email, password)
 }
-export function logout() {
+export function logOut() {
     return auth.signOut()
 }
+
 export function resetPassword(email) {
     return auth.sendPasswordResetEmail(email)
 }
 
-
-export function RegistrationHandler({ children }) {
+export default function RegistrationHandler({ children }) {
     const [currentUser, setCurrentUser] = useState()
     const [loading, setLoading] = useState(true)
 
@@ -46,13 +46,19 @@ export function RegistrationHandler({ children }) {
         currentUser,
         login,
         signup,
-        logout,
+        logOut,
         resetPassword,
         updateEmail,
         updatePassword
     }
 
-    return ( < AuthContext.Provider value = { value } > {!loading && children } </AuthContext.Provider >)
-    }
+    return (< AuthContext.Provider value={value} > {!loading && children} </AuthContext.Provider >)
+}
 
-    export default RegistrationHandler;
+
+
+
+
+
+
+
