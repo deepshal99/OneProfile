@@ -26,7 +26,7 @@ import {
     saveUser
 } from "../Handler/firestoreHandler";
 import firebase from "firebase";
-import {InfoGetter} from "../pages/UserInfo";
+
 
 //Sign up Component
 
