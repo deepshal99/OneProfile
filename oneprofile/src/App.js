@@ -7,7 +7,7 @@ import HomeHeader from './components/HomeHeader';
 import Profile from './components/Profile'
 import RegistrationHandler from './Handler/RegistrationHandler'
 import { SignIn } from './components/SigninNew/SignIn';
-import Hero from './pages/Hero'
+
 import Pricing from './pages/Pricing'
 import MultiStepFormHolder from './components/MultiStepFormHolder/MultiStepFormHolder'
 import Modal from './components/Modal/Modal'
@@ -29,9 +29,7 @@ function App() {
                                 <HomeHeader />
                                 <Home />
                             </Route>
-                            <Route exact path='/Hero'>
-                                <Hero />
-                            </Route>
+                            
                             <Route exact path='/home'>
                                 <HomeHeader />
                                 <Home />
