@@ -1,0 +1,49 @@
+.PortfolioContainer {
+  display: flex;
+  flex-direction: row;
+ 
+  scroll-behavior: auto;
+  /* overflow-x: scroll; */
+  height: auto;
+  
+}
+.PortfolioContainer::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.PortfolioContainer::-webkit-scrollbar-thumb {
+  width: 5px;
+  background-color: rgb(255, 255, 255);
+}
+/* .addButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 150px;
+  min-width: 150px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgb(233, 186, 255);
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 74px;
+  font-weight: bolder;
+  color: blueviolet;
+  outline: none;
+  border: none;
+}
+.addButton:active {
+  background-color: rgb(184, 147, 226);
+  transition: 150ms;
+  transform: translate(2px, 5px);
+}
+
+.addButton span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */

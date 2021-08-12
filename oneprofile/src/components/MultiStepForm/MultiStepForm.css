@@ -1,0 +1,68 @@
+.MultiStepForm {
+    display: flex;
+    background-color: white;
+    width: 500px;
+    box-shadow: 4px 4px 10px rgb(160, 160, 160);
+    border-radius: 5px;
+    padding: 30px;
+    margin: 5px;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.buttonHolder{
+    padding:10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.next{
+    background-color: #3182ce;
+    color:white;
+    padding: 15px;
+    width: 100px;
+    border-radius: 5px;
+    margin:10px;
+    font-weight: bold;
+    transform: .5s linear;
+}
+.next:hover{
+    background-color: #2767a3;
+
+}
+
+.prev{
+    background-color: #e2e8f0;
+    color: rgb(87, 87, 87);
+    padding: 15px;
+    width: 100px;
+    border-radius: 5px;
+    margin:10px;
+    font-weight: 500;
+}
+.prev:hover{
+    background-color: #c8cdd3;
+
+}
+
+
+
+.top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.stepCounter{
+    float: left;
+    font-size: 12px;
+    font-weight: bolder;
+    color:rgb(32, 75, 218);
+}
+
+.progress-bar {
+    float:right;
+    width: 80%;
+}

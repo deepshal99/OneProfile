@@ -1,0 +1,14 @@
+.PersonalDetails {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    text-align: left;
+    
+}
+
+
+.title{
+    padding: 10px auto;
+    font-weight: bold;
+    font-size: xx-large;    
+}
