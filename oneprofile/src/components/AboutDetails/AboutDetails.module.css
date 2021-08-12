@@ -1,0 +1,30 @@
+.PersonalDetails {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    text-align: left;
+    
+}
+
+.wd10{
+    width: 300px;
+    padding: 10px;
+    color: black;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-radius: 5px;
+    border-color: rgb(255, 255, 255);
+    transition: 1s;
+}
+.wd10:hover{
+    border-color: rgb(0, 187, 56);
+}
+.title{
+    padding: 10px auto;
+    font-weight: bold;
+    font-size: xx-large;    
+}
+
+.description-box {
+    padding-top: 20px;
+}

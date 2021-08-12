@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import { useEffect, useContext, useState } from "react";
-import { AuthContext } from "../Handler/RegistrationHandler"
-import { Redirect } from "react-router-dom";
-import { Spacer, Button, Input, useColorModeValue, Textarea} from "@chakra-ui/react";
-import {Card} from "../components/Card"
+import { useState } from "react";
+import { Button, Input, useColorModeValue, Textarea} from "@chakra-ui/react";
+import {Card} from "../components/SigninNew/Card"
 
 
 export function InfoGetter(){

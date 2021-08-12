@@ -50,7 +50,7 @@ import {
               <VisuallyHidden>Login with Facebook</VisuallyHidden>
               <FaFacebook />
             </Button> */}
-            <Button  color="currentColor" variant="outline">
+            <Button  color="currentColor" variant="outline" flex="1">
               <VisuallyHidden>Login with Google</VisuallyHidden>
               <FaGoogle />
             </Button>

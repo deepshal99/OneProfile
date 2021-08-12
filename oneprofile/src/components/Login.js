@@ -28,12 +28,6 @@ function Login() {
         auth.signInWithPopup(googleProvider).then((res) => {
             console.log("User ID:"+res.user.uid)
             localStorage.setItem("loadedInEmail", res.user.email)
-            localStorage.setItem("loadedInName", res.user.displayName)
-            localStorage.setItem("photoURL", res.user.photoURL)
-            console.log("photoURL: "+ res.user.photoURL)
-    
-            saveUser(res.user.email,
-                res.user.displayName)
             h.push("/profile")
         }).catch((error) => {
             console.log(error.message)

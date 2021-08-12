@@ -6,10 +6,12 @@ import Home from './components/Home'
 import HomeHeader from './components/HomeHeader';
 import Profile from './components/Profile'
 import RegistrationHandler from './Handler/RegistrationHandler'
-import { SignIn } from './components/SignIn';
+import { SignIn } from './components/SigninNew/SignIn';
 import Hero from './pages/Hero'
 import Pricing from './pages/Pricing'
-import MultiStepForm from './components/MultiStep'
+import MultiStepFormHolder from './components/MultiStepFormHolder/MultiStepFormHolder'
+import Modal from './components/Modal/Modal'
+import ProfileComponent from './components/ProfileComponent/ProfileComponent'
 
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -35,13 +37,19 @@ function App() {
                                 <Home />
                             </Route>
                             <Route exact path='/profile'>
-                                <Profile />
+                                <ProfileComponent />
                             </Route>
                             <Route exact path='/signin'>
                                 <SignIn />
                             </Route>
                             <Route exact path='/multistep'>
-                                <MultiStepForm />
+                                <MultiStepFormHolder/>
+                            </Route>
+                            <Route exact path='/modal'>
+                                <Modal />
+                            </Route>
+                            <Route exact path='/portfolio'>
+                                <ProfileComponent />
                             </Route>
                             <Route exact path='/pricing'>
                                 <HomeHeader />

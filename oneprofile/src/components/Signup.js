@@ -49,9 +49,6 @@ function Signup() {
                 localStorage.setItem("loadedInName", res.user.displayName)
                 localStorage.setItem("photoURL", res.user.photoURL)
                 console.log("photoURL: "+ res.user.photoURL)
-        
-                saveUser(res.user.email,
-                    res.user.displayName)
                 h.push("/multistep")
             })
             .catch((error) => {
