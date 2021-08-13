@@ -1,0 +1,77 @@
+.ProfileComponent {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+
+  background-color: rgb(240, 239, 255);
+  text-align: left;
+}
+
+.wrapper {
+  margin: 3rem 8rem;
+}
+
+.profile-content {
+  padding: 0;
+}
+
+.profileRow {
+  
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+
+}
+.ProfilePhoto {
+  width: 8rem;
+  height: auto;
+  border-radius: 100%;
+}
+
+.ProfilePhotoConatainer {
+  margin-top: 20px;
+  width: auto;
+}
+.editPhotoButton {
+  margin-right: 150px;
+  margin-top: 150px;
+  position: fixed;
+}
+.BioData {
+  
+  max-width: 36%;
+  margin-bottom:3rem;
+}
+.name {
+  
+  font-size: 28px;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  margin: 5px;
+}
+.profession {
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  margin-left: 5px;
+}
+.about {
+  padding-top: 5px;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  margin-left: 5px;
+  line-height: 130%;
+}
+
+.editButton {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  background-color: rgb(89, 98, 255);
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
