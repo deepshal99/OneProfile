@@ -18,7 +18,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // import RegistrationHandler from './Handler/RegistrationHandler';
 
 function App() {
-    
+
     return (
         <RegistrationHandler>
             <Router>
@@ -29,7 +29,7 @@ function App() {
                                 <HomeHeader />
                                 <Home />
                             </Route>
-                            
+
                             <Route exact path='/home'>
                                 <HomeHeader />
                                 <Home />
@@ -41,7 +41,7 @@ function App() {
                                 <SignIn />
                             </Route>
                             <Route exact path='/multistep'>
-                                <MultiStepFormHolder/>
+                                <MultiStepFormHolder />
                             </Route>
                             <Route exact path='/modal'>
                                 <Modal />
