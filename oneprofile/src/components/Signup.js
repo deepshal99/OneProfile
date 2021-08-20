@@ -27,6 +27,7 @@ import {
 } from "../Handler/firestoreHandler";
 import firebase from "firebase";
 
+
 //Sign up Component
 
 function Signup() {
