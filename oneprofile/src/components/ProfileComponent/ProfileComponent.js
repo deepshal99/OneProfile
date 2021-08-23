@@ -3,6 +3,7 @@ import './ProfileComponent.css';
 import PortfolioContainer from '../PortfolioContainer/PortfolioContainer';
 import EditIcon from '@material-ui/icons/Edit';
 import {getUserByEmail} from"../../Handler/firestoreHandler"
+import ExperienceBox from '../ExperienceBox/ExperienceBox.js'
 
 const ProfileComponent = () => {
   const [userProfilePic,setuserProfilePic] = React.useState("")
@@ -31,6 +32,7 @@ const ProfileComponent = () => {
           <div className="profession">{userProfession}</div>
           <div className="about">{userAbout}</div>
         </div>
+        <ExperienceBox />
         <PortfolioContainer />
         <div className="editButton">
           <EditIcon style={{ fill: "white" }} />

@@ -1,0 +1,16 @@
+.ExperienceField {
+    padding-top: 1rem;
+}
+
+
+
+.company_details {
+    display: flex;
+    flex-direction: row;
+ 
+}
+
+.company_details h3 {
+    padding-right: 1rem;
+}
+

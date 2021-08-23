@@ -1,1 +1,12 @@
-.ExperienceBox {}
+.ExperienceBox {
+  background-color: white;
+  padding: 1.4rem;
+  height: auto;
+  width: 86%;
+  margin-bottom: 4rem;
+}
+
+.ExperienceMain {
+  display: flex;
+  flex-direction: row;
+}

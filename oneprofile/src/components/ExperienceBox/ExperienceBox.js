@@ -1,10 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
 import styles from './ExperienceBox.module.css';
+import ExperienceField from '../ExperienceField/ExperienceField';
+
 
 const ExperienceBox = () => (
   <div className={styles.ExperienceBox}>
-    ExperienceBox Component
+    <h3>Experience</h3>
+    <div className={styles.ExperienceMain}>
+      <ExperienceField />
+      <ExperienceField />
+      <ExperienceField />
+    </div>
   </div>
 );
 
