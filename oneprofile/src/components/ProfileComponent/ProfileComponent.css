@@ -28,7 +28,7 @@
 }
 
 .ProfilePhotoConatainer {
-  margin-top: 20px;
+  margin-top: 2rem;
   width: auto;
 }
 .editPhotoButton {
@@ -38,7 +38,7 @@
 }
 .BioData {
   
-  max-width: 36%;
+  /* max-width: 36%; */
   margin-bottom:3rem;
 }
 .name {

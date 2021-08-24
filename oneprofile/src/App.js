@@ -4,7 +4,6 @@ import Signup from './components/Signup'
 import Login from './components/Login'
 import Home from './components/Home'
 import HomeHeader from './components/HomeHeader';
-import Profile from './components/Profile'
 import RegistrationHandler from './Handler/RegistrationHandler'
 import { SignIn } from './components/SigninNew/SignIn';
 
